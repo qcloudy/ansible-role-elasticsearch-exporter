@@ -1,0 +1,8 @@
+---
+- name: restart elasticsearch-exporter
+  become: true
+  systemd:
+    name: "{{ elasticsearch_exporter_service }}.service"
+    daemon_reload: yes
+    state: restarted
+  listen: restart elasticsearch-exporter

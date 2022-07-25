@@ -1,0 +1,10 @@
+---
+elasticsearch_exporter_args:
+  - '-es.uri=http://localhost:9200'
+  - '-es.all=false'
+  - '-es.indices=false'
+  - '-web.listen-address=0.0.0.0:9114'
+elasticsearch_exporter_image: justwatch/elasticsearch_exporter:1.0.2
+elasticsearch_exporter_restart: "on-failure"
+elasticsearch_exporter_restart_sec: "15"
+elasticsearch_exporter_service: "elasticsearch-exporter"
